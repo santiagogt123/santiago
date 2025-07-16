@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="../estilos/body.css" />
+    <link rel="stylesheet" href="../estilos/footer.css" />
+    <link rel="stylesheet" href="../estilos/barra.css" />
+    <link rel="stylesheet" href="../estilos/style.css" />
+    <link rel="stylesheet" href="../estilos/pantalla.css" />
+    <link rel="stylesheet" href="../estilos/series.css" />
+    <link rel="stylesheet" href="../estilos/contacto.css"/>
+
+    <title>Portafolio de Busy</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo-title">
+                <!-- Logo e título del portafolio -->
+                <img src="../imagenes/busy.jpeg" alt="Logo" class="logo" />
+                <h1>Portafolio personal de Busy</h1>
+            </div>
+            <ul class="nav-menu">
+                <!-- Navegación con data-section para mostrar secciones -->
+                <li><a href="#" data-section="acerca">Acerca de mí</a></li>
+                <li><a href="#" data-section="habilidades">Habilidades</a></li>
+                <li><a href="#" data-section="contacto">Contacto</a></li>
+                <li><a href="#" data-section="series">Series favoritas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <button id="btn-volver-inicio" title="Volver al inicio" aria-label="Volver al inicio">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24"> <!--SVG sirve para hacer simbolos sin la necesidad de usar imagenes jpg o algun otro formato-->
+    <path d="M15 6l-6 6 6 6"/>
+  </svg>
+  
+</button>
+    <main>
+        
+
+        <!-- Sección Acerca de mí -->
+        <section id="acerca">
+            <h2>Acerca de mí</h2>
+            <p>Hola, soy Busy y este es mi portafolio personal.</p>
+        </section>
+
+        <!-- Sección Habilidades -->
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>HTML y CSS</li>
+                <li>Diseño Web</li>
+                <li>Creatividad visual</li>
+                <li>Organización de contenido</li>
+            </ul>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Podés escribirme a <a href="mailto:busygt@gmail.com">busygt@gmail.com</a></p>
+        <!-- Formulario de contacto -->
+        <form action="send.php" method="POST">
+        <?php if ($error): ?>
+        <p style="color:red;"><?php echo htmlspecialchars($error); ?></p>
+        <?php endif; ?>
+
+        <?php if ($success): ?>
+        <p style="color:green;"><?php echo htmlspecialchars($success); ?></p>
+    <?php endif; ?>
+            <label for="name">Nombre:</label><br />
+            <input type="text" id="name" name="name" required /><br /><br />
+            <label for="email">Correo electrónico:</label><br />
+            <input type="email" id="email" name="email" required /><br /><br />
+            <label for="message">Mensaje:</label><br />
+            <textarea id="message" name="message" rows="5" required></textarea><br /><br />
+
+        <button type="submit">Enviar</button>
+    </form>
+        </section>
+
+        <!-- Sección Series favoritas con tarjetas -->
+        <section id="series">
+            <div id="cajapadre">
+                <div class="poster"></div>
+                <div class="poster"></div>
+                <div class="poster"></div>
+                <div class="poster"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Archivo javascript -->
+    <script src="../scripts/botones.js"></script>
+    
+    <footer>
+        <p>© 2025 Busy - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+
+</html>

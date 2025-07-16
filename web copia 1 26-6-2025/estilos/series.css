@@ -1,0 +1,91 @@
+/*Conviene bloquea el scroll?*/
+/*Conviene que las portadas ocupen toda la web (desde la barra hasta el footer?*/
+.poster {
+  background-size: contain;       /* para ver imagen completa sin cortes */
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px; /*Esta propiedad define el radio del círculo virtual que el navegador utilizará para dibujar las esquinas redondeadas.*/
+  width: 100%;
+  aspect-ratio: 16 / 9;           /* ajusta según proporción */
+}
+#series {
+  height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+/*Seccion para distribuir las portadas */
+#cajapadre {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  height: 100%; 
+  width: 100%;
+  gap: 10px;
+  padding: 20px;
+}
+
+main {
+    margin-top: 90px; 
+    height: calc(100vh - 90px);
+}
+
+.poster {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  border-radius: 8px;
+}
+.poster:nth-child(1){
+    background-image: url('../imagenes/maradona.jpg');
+}
+.poster:nth-child(2){
+    background-image: url('../imagenes/ashoka.jpg');
+}
+.poster:nth-child(3){
+    background-image: url('../imagenes/cars.jpg');
+}
+.poster:nth-child(4){
+    background-image: url('../imagenes/casa.jpg');
+}
+#series-favoritas {
+    padding-top: 70px; /* espacio para que no tape la navbar */
+    height: calc(100vh - 70px); /* ocupa lo visible menos la barra */
+    overflow: hidden; /* sin scroll */
+}
+
+#series-favoritas .contenedor-series {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.series-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.series-grid img {
+    width: auto;
+    height: 70vh; /* O lo que necesites */
+    object-fit: contain;
+}
+.series-credito {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 0;
+}
+.barra {
+    display: none;
+}
+

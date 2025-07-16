@@ -1,0 +1,10 @@
+/* ----------------------------------------
+Footer con fondo semitransparente
+---------------------------------------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(28, 2, 46, 0.7);
+    color: white;
+    position: relative;
+}

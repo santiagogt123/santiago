@@ -1,0 +1,14 @@
+/* ----------------------------------------
+Responsive: Ajustes para pantallas grandes (1200px)
+---------------------------------------- */
+@media (min-width: 1200px) {
+    .serie {
+        width: 260px;
+        height: 370px;
+        padding: 20px;
+    }
+
+    .serie .serie-text {
+        font-size: 1.5rem;
+    }
+}

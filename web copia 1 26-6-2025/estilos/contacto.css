@@ -1,0 +1,38 @@
+#contacto {
+  position: relative;
+  background: linear-gradient(135deg, #0a1a28, #121b24 60%, #000000 100%);
+  color: white;
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+/* Líneas onduladas con pseudo-elementos */
+
+#contacto::before,
+#contacto::after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 250px;
+  left: -25%;
+  border-radius: 45% / 100%;
+  pointer-events: none;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+/* Primera onda */
+#contacto::before {
+  top: 20px;
+  background: linear-gradient(135deg, #00e5ff 0%, transparent 70%);
+  transform: rotate(-20deg);
+  filter: blur(15px);
+}
+
+/* Segunda onda */
+#contacto::after {
+  top: 120px;
+  background: linear-gradient(45deg, transparent 30%, #00a8cc 80%);
+  transform: rotate(15deg);
+  filter: blur(20px);
+}

@@ -1,0 +1,168 @@
+/* ----------------------------------------
+Barra de navegación fija en la parte superior
+---------------------------------------- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(28, 2, 46, 0.7);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+/* ----------------------------------------
+Logo y título en la barra de navegación
+---------------------------------------- */
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: rgb(0, 255, 255);
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* ----------------------------------------
+Menú de navegación (lista horizontal)
+---------------------------------------- */
+.nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 35px;
+    list-style-type: none;
+}
+
+.nav-menu li {
+    float: none;
+}
+
+.nav-menu a {
+    display: block;
+    color: rgb(0, 255, 255);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.nav-menu a:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+/* ----------------------------------------
+Mostrar solo la sección activa
+---------------------------------------- */
+section {
+    display: none; /* Ocultar todas por defecto */
+}
+
+section.active {
+    display: block; /* Solo se muestra la activa */
+}
+/* ----------------------------------------
+Estilos para las secciones principales
+---------------------------------------- */
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 30px;
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.1rem;
+}
+
+section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 1.1rem;
+}
+
+section a {
+    color: cyan;
+    text-decoration: underline;
+}
+
+section a:hover {
+    color: white;
+}
+section {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    height: 100vh;
+    overflow: hidden;
+}
+
+section.active {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0); /* totalmente transparente */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 20px;
+    color: cyan;
+}
+.nav-menu a {
+    display: block;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: cyan;
+}
+
+/* Estilos generales del botón */
+#btn-volver-inicio {
+  background-color: transparent; /* Fondo transparente */
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, fill 0.3s ease;
+}
+
+/* Estilos del ícono SVG */
+#btn-volver-inicio svg {
+  fill: white; /* Color blanco inicial */
+  transition: fill 0.3s ease;
+}
+
+/* Efecto al pasar el mouse (hover) */
+#btn-volver-inicio:hover {
+  background-color: black; /* Fondo negro */
+}
+
+#btn-volver-inicio:hover svg {
+  fill: #00bfff; /* Celeste (DeepSkyBlue) */
+}

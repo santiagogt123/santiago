@@ -1,0 +1,12 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 100px 0 0 0; /* Espacio superior para el nav */
+    background-image: url('../imagenes/universo.jpeg'); /* Fondo por defecto */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    scroll-behavior: smooth;
+    overflow: hidden; /*bloquea el scroll de todo el sitio */
+}  

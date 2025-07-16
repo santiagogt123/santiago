@@ -1,0 +1,76 @@
+#btn-volver-inicio {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1100; /* asegurate de que esté por encima de otros elementos */
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 50%; /* Si querés forma redonda */
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s ease;
+}
+
+#btn-volver-inicio:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+/* Estilos para el formulario de contacto */
+#contacto form {
+  background-color: #0D0D0D;  /* fondo oscuro */
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 0 15px #00CFFF;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#contacto form label {
+  display: block;
+  margin-top: 10px;
+  color: #00CFFF; /* celeste para etiquetas */
+  font-weight: bold;
+}
+
+#contacto form input,
+#contacto form textarea {
+  background-color: #1A1A1A;
+  border: 1px solid #00CFFF;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+#contacto form input:focus,
+#contacto form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px #00CFFF;
+}
+
+#contacto form button[type="submit"] {
+  background-color: #00CFFF;
+  color: #0D0D0D;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contacto form button[type="submit"]:hover {
+  background-color: #00AACC;
+}
